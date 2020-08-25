@@ -35,7 +35,7 @@ resource oci_identity_group GBUb {
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = var.compartment_id
-#  compartmentId = var.tenancy_ocid
+  compartmentId = var.tenancy_ocid
   description = "GBU_Policyb"
   freeform_tags = {
   }
