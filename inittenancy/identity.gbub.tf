@@ -10,7 +10,7 @@ resource oci_identity_compartment GBUb {
 
 resource oci_identity_dynamic_group TIMS-oSSHb {
   compartment_id = var.tenancy_ocid
-  compartmentId = var.tenancy_ocid
+#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSHb"
   freeform_tags = {
   }
@@ -35,7 +35,7 @@ resource oci_identity_group GBUb {
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = var.compartment_id
-  compartmentId = var.tenancy_ocid
+#  compartmentId = var.tenancy_ocid
   description = "GBU_Policyb"
   freeform_tags = {
   }
@@ -49,7 +49,7 @@ resource oci_identity_policy GBU_Policyb {
 
 resource oci_identity_policy TIMS-oSSHb {
   compartment_id = var.tenancy_ocid
-  compartmentId = var.tenancy_ocid
+#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSHb"
   freeform_tags = {
   }
@@ -62,7 +62,7 @@ resource oci_identity_policy TIMS-oSSHb {
 }
 resource oci_identity_policy TIMS-oSSH-Usersb {
   compartment_id = var.tenancy_ocid
-  compartmentId = var.tenancy_ocid
+#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSH-Usersb"
   freeform_tags = {
   }
