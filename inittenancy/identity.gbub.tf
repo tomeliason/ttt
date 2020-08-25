@@ -5,11 +5,11 @@
 #}
 
 resource oci_identity_compartment GBUb {
-  compartment_id = "${var.tenancy_ocid}"
+#  compartment_id = "${var.tenancy_ocid}"
   description = "GBUb"
   freeform_tags = {
   }
-  name = "GBU"
+  name = "GBUb"
 }
 
 resource oci_identity_dynamic_group TIMS-oSSHb {
