@@ -26,11 +26,11 @@ resource oci_identity_group GBUb {
 }
 
 
-resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
-  group_id             = oci_identity_group.GBUb.id
-  identity_provider_id = oci_identity_identity_provider.export_OracleIdentityCloudService.id
-  idp_group_name       = "GBUb"
-}
+#resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
+#  group_id             = oci_identity_group.GBUb.id
+#  identity_provider_id = oci_identity_identity_provider.OracleIdentityCloudService.id
+#  idp_group_name       = "GBUb"
+#}
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = var.compartment_id
