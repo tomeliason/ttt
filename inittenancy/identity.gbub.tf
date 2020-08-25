@@ -5,7 +5,7 @@
 #}
 
 resource oci_identity_compartment GBUb {
-#  compartment_id = "${var.tenancy_ocid}"
+  compartment_id = "${var.tenancy_ocid}"
   description = "GBUb"
   freeform_tags = {
   }
