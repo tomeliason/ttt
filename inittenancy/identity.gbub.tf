@@ -78,5 +78,6 @@ resource oci_identity_policy TIMS-oSSH-Usersb {
 }
 
 output "results" {
-  value = "${resource.oci_identity_policy.TIMS-oSSH-Usersb.id}"
+  description = "TIMS-oSSH-Usersb Policy"
+  value = oci_identity_policy.TIMS-oSSH-Usersb.id
 }
