@@ -12,17 +12,13 @@ data oci_identity_identity_providers OracleIdentityCloudService {
 resource oci_identity_compartment GBUb {
   compartment_id = "${var.tenancy_ocid}"
   description = "GBUb"
-  freeform_tags = {
-  }
   name = "GBUb"
 }
 
 resource oci_identity_dynamic_group TIMS-oSSHb {
   compartment_id = "${var.tenancy_ocid}"
-#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSHb"
-  freeform_tags = {
-  }
+  freeform_tags = {}
   matching_rule = "any {instance.compartment.id = /*/}"
   name          = "TIMS-oSSHb"
 }
@@ -30,21 +26,19 @@ resource oci_identity_dynamic_group TIMS-oSSHb {
 resource oci_identity_group GBUb {
   compartment_id = "${var.tenancy_ocid}"
   description = "GBUb"
-  freeform_tags = {
-  }
+  freeform_tags = {}
   name = "GBUb"
 }
 
 
-#resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
-#  group_id             = "${oci_identity_group.GBUb.id}"
-#  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService.id
-#  idp_group_name       = "GBUb"
-#}
+resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
+  group_id             = "${oci_identity_group.GBUb.id}"
+  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService.id[0]
+  idp_group_name       = "GBUb"
+}
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = "${var.tenancy_ocid}"
-#  compartmentId = var.tenancy_ocid
   description = "GBU_Policyb"
   freeform_tags = {
   }
@@ -58,7 +52,6 @@ resource oci_identity_policy GBU_Policyb {
 
 resource oci_identity_policy TIMS-oSSHb {
   compartment_id = var.tenancy_ocid
-#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSHb"
   freeform_tags = {
   }
@@ -71,7 +64,6 @@ resource oci_identity_policy TIMS-oSSHb {
 }
 resource oci_identity_policy TIMS-oSSH-Usersb {
   compartment_id = var.tenancy_ocid
-#  compartmentId = var.tenancy_ocid
   description = "TIMS-oSSH-Usersb"
   freeform_tags = {
   }
@@ -87,7 +79,18 @@ output "TIMS-oSSH-UsersbPolicy" {
   value = oci_identity_policy.TIMS-oSSH-Usersb.id
 }
 
+output "TIMS-oSSHbPolicy" {
+  description = "TIMS-oSSHb Policy"
+  value = oci_identity_policy.TIMS-oSSHb.id
+}
+
+output "compartment" {
+  description = "compartment"
+  value = oci_identity_compartment.GBUb.id
+}
+
 output "idp" {
   description = "idp"
-  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id[0]
 }
+
