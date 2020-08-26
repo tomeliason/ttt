@@ -4,7 +4,9 @@
 #    tenancy_ocid="${var.tenancy_ocid}"
 #}
 
-data oci_identity_identity_provider OracleIdentityCloudService {
+data oci_identity_identity_providers OracleIdentityCloudService {
+  compartment_id = "${var.tenancy_ocid}"
+  protocol = "SAML2"
   identity_provider_id = oci_identity_identity_provider.OracleIdentityCloudService.id
 }
 
