@@ -85,8 +85,8 @@ output "TIMS-oSSHbPolicy" {
 }
 
 output "compartment" {
-  description = "compartment"
-  value = oci_identity_compartment.GBUb.id
+  description = "compartment" 
+  value = oci_identity_compartment.GBUb.id 
 }
 
 output "idp" {
