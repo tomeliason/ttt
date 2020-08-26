@@ -74,23 +74,28 @@ resource oci_identity_policy TIMS-oSSH-Usersb {
   ]
 }
 
-output "TIMS-oSSH-UsersbPolicy" {
+output "oci_identity_policy" {
   description = "TIMS-oSSH-Usersb Policy"
   value = oci_identity_policy.TIMS-oSSH-Usersb.id
 }
 
-output "TIMS-oSSHbPolicy" {
+output "oci_identity_policy" {
   description = "TIMS-oSSHb Policy"
   value = oci_identity_policy.TIMS-oSSHb.id
 }
 
-output "compartment" {
+output "oci_identity_compartment" {
   description = "compartment" 
   value = oci_identity_compartment.GBUb.id 
 }
 
-output "idp" {
+output "oci_identity_identity_provider" {
   description = "idp"
-  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id " " data.oci_identity_identity_providers.OracleIdentityCloudService.name
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id  
+}
+
+output "oci_identity_identity_provider" {
+  description = "idp"
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id  data.oci_identity_identity_providers.OracleIdentityCloudService.name
 }
 
