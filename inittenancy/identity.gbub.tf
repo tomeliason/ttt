@@ -4,6 +4,10 @@
 #    tenancy_ocid="${var.tenancy_ocid}"
 #}
 
+data oci_identity_identity_provider OracleIdentityCloudService {
+  identity_provider_id = oci_identity_identity_provider.OracleIdentityCloudService.id
+}
+
 resource oci_identity_compartment GBUb {
   compartment_id = "${var.tenancy_ocid}"
   description = "GBUb"
@@ -77,7 +81,7 @@ resource oci_identity_policy TIMS-oSSH-Usersb {
   ]
 }
 
-output "results" {
+output "TIMS-oSSH-Usersb Policy ID" {
   description = "TIMS-oSSH-Usersb Policy"
   value = oci_identity_policy.TIMS-oSSH-Usersb.id
 }
