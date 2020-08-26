@@ -31,11 +31,11 @@ resource oci_identity_group GBUb {
 }
 
 
-#resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
-#  group_id             = "${oci_identity_group.GBUb.id}"
-#  identity_provider_id = "${data.oci_identity_identity_providers.OracleIdentityCloudService.id}"
-#  idp_group_name       = "GBUb"
-#}
+resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
+  group_id             = "${oci_identity_group.GBUb.id}"
+  identity_provider_id = "${data.oci_identity_identity_providers.OracleIdentityCloudService.identity_providers[0].id}"
+  idp_group_name       = "GBUb"
+}
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = "${var.tenancy_ocid}"
@@ -87,7 +87,7 @@ output "oci_identity_compartment" {
 
 output "oci_identity_identity_provider" {
   description = "idp"
-  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id  
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService.identity_providers[0].id  
   #value = data.oci_identity_identity_providers.OracleIdentityCloudService.name
 }
 
