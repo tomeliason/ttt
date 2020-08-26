@@ -36,11 +36,11 @@ resource oci_identity_group GBUb {
 }
 
 
-resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
-  group_id             = "${oci_identity_group.GBUb.id}"
-  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService.id
-  idp_group_name       = "GBUb"
-}
+#resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
+#  group_id             = "${oci_identity_group.GBUb.id}"
+#  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService.id
+#  idp_group_name       = "GBUb"
+#}
 
 resource oci_identity_policy GBU_Policyb {
   compartment_id = "${var.tenancy_ocid}"
@@ -85,4 +85,9 @@ resource oci_identity_policy TIMS-oSSH-Usersb {
 output "TIMS-oSSH-UsersbPolicy" {
   description = "TIMS-oSSH-Usersb Policy"
   value = oci_identity_policy.TIMS-oSSH-Usersb.id
+}
+
+output "idp" {
+  description = "idp"
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id
 }
