@@ -33,7 +33,7 @@ resource oci_identity_group GBUb {
 
 resource oci_identity_idp_group_mapping OracleIdentityCloudService_idp_group_mapping_7 {
   group_id             = "${oci_identity_group.GBUb.id}"
-  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService.id[0]
+  identity_provider_id = data.oci_identity_identity_providers.OracleIdentityCloudService[0].id
   idp_group_name       = "GBUb"
 }
 
@@ -91,6 +91,6 @@ output "compartment" {
 
 output "idp" {
   description = "idp"
-  value = data.oci_identity_identity_providers.OracleIdentityCloudService.id[0]
+  value = data.oci_identity_identity_providers.OracleIdentityCloudService[0].id
 }
 
