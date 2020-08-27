@@ -8,6 +8,9 @@ terraform init
 terraform apply -auto-approve
 export TF_VAR_compartment_id = `terraform output tenancycompartments`
 
+cd .. 
+
+pwd 
 
 rm -rf tf-export 
 
