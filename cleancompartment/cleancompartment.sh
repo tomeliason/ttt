@@ -10,6 +10,8 @@ terraform init
 terraform apply -auto-approve
 export TF_VAR_compartment_id=`terraform output tenancycompartments`
 
+rm -rf .terraform
+
 cd .. 
 
 pwd 
@@ -18,8 +20,12 @@ rm -rf tf-export
 
 mkdir tf-export 
 
-./terraform-provider-oci -command=export \
-                         -compartment_id=ocid1.compartment.oc1..aaaaaaaaas357j3xdy5grl4dmotmtumrcopqxifuayurkowavjvzrmihfala \
+terraform init
+
+export TPO=`find . -name *terraform-provider-oci*.*`
+
+eval $TPO -command=export \
+                         -compartment_id=$TF_VAR_compartment_id \
                          -output_path=tf-export \
                          -generate_state
 
