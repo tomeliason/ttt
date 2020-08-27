@@ -10,7 +10,7 @@ data oci_identity_compartments tenancycompartments {
 
 output "tenancycompartments" {
   description = "compartment" 
-  value = oci_identity_compartments.tenancycompartments.compartments[0].id 
+  value = data.oci_identity_compartments.tenancycompartments.compartments[0].id 
 }
 
 
