@@ -17,7 +17,7 @@ systemctl start nscd
 
 getent passwd
 
-yum install ossh-client
+yum install -y ossh-client 
 
 eval `ssh-agent`
 
