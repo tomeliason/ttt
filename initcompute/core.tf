@@ -299,3 +299,13 @@ resource oci_core_default_security_list Default-Security-List-for-vcngbuossh {
   }
   manage_default_resource_id = oci_core_vcn.vcngbuossh.default_security_list_id
 }
+
+output "instance-public-ossh" {
+  description = "instance-public-ossh public_ip" 
+  value = oci_core_instance.instance-public-ossh.public_ip 
+}
+
+output "instance-private-ossh" {
+  description = "instance-private-ossh private_ip" 
+  value = oci_core_instance.instance-private-ossh.private_ip
+}

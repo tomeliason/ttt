@@ -19,14 +19,16 @@ rm -rf .terraform
 # move up a directory
 cd .. 
 
-pwd 
-
 # cleanup any existing export directory and recreate it
 #rm -rf tf-export 
 #mkdir tf-export 
 
 # initialize terraform to get the provider
 terraform init
+
+# execute the terraform by applying and auto-approve
+
+terraform apply -auto-approve
 
 # find the provider executable and put it in a variable; the export command applies directly to a provider
 #export TPO=`find . -name *terraform-provider-oci*.*`
