@@ -35,7 +35,7 @@ resource oci_core_instance instance-public-ossh {
     skip_source_dest_check = "false"
     subnet_id              = oci_core_subnet.Public-Subnet-vcngbuossh.id
   }
-  display_name = "instance-public"
+  display_name = "instance-public-ossh"
   extended_metadata = {
   }
   fault_domain = "FAULT-DOMAIN-1"
