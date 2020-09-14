@@ -10,6 +10,11 @@ data oci_identity_compartments tenancycompartments {
 
 output "tenancycompartments" {
   description = "compartment" 
+  value = data.oci_identity_compartments.tenancycompartments.compartments[*].id 
+}
+
+output "tenancycompartments" {
+  description = "compartment" 
   value = data.oci_identity_compartments.tenancycompartments.compartments[0].id 
 }
 
