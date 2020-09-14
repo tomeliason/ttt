@@ -2,10 +2,10 @@
 
 data oci_identity_compartments tenancycompartments {
   compartment_id = "${var.tenancy_ocid}"
-  filter {
-    name = "name" 
-    values = ["GBU"]
-  }
+#  filter {
+#    name = "name" 
+#    values = ["GBU"]
+#  }
 }
 
 output "tenancycompartments" {
