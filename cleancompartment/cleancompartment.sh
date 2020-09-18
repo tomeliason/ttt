@@ -5,6 +5,14 @@ echo 'cleancompartment'
 # obtain the tenancy OCID from the environment in the OIC Cloud Shell 
 export TF_VAR_tenancy_ocid=$OCI_TENANCY
 
+oci iam compartment list --lifecycle-state ACTIVE --query 'data[*]|[*]."name"' --compartment-id-in-subtree true --output table
+read -p "select compartment you wish to clean: " compartment_name
+
+echo ${compartment_name}
+export TF_VAR_compartment_name=${compartment_name}
+
+echo $TF_VAR_tenancy_ocid
+
 # change in to the directory to get the GBU compartment OCID
 cd ttt/cleancompartment/gbuocid
 
