@@ -20,7 +20,7 @@ idgroup=$(oci iam dynamic-group list --lifecycle-state ACTIVE --query "data[?\"n
 
 #if the dynamic group TIMS-oSSH doesnt exist, create it
 
-if [ -z $idgroup ]
+if [ -z "$idgroup" ]
 then 
     # change in to the directory to create the TIMS-oSSH dynamic group for the OCI Tenancy
     cd ttt/initcompartment/timsossh-dynamicgroup
@@ -40,7 +40,7 @@ ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --lifecycle-state AC
 
 # if identity policy TIMS-oSSH  doesnt exist, create it
 
-if [ -z $ipolicy ]
+if [ -z "$ipolicy" ]
 then 
     # change in to the directory to create the TIMS-oSSH dynamic group for the OCI Tenancy
     cd ttt/initcompartment/timsossh-dynamicgroup
@@ -55,13 +55,13 @@ else
 fi 
 
 # change in to the directory to intialize the OCI Tenancy
-#cd ttt/initcompartment 
+cd ttt/initcompartment 
 
 # execute terraform; initialize, apply to initialize the OCI Tenancy
-#terraform init
-#terraform plan
-#terraform apply -auto-approve
+terraform init
+terraform plan
+terraform apply -auto-approve
 
-echo 'initcompartment - complete'
+echo 'initcompartment - complete - for compartment ' ${compartment_name}
 
 
