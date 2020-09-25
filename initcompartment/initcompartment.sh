@@ -36,7 +36,7 @@ else
 fi 
 
 # determine if the identity policy TIMS-oSSH exists 
-ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --lifecycle-state ACTIVE --query "data[?\"name\" == 'TIMS-oSSH'].name")
+ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --query "data[?\"name\" == 'TIMS-oSSH'].name")
 
 # if identity policy TIMS-oSSH  doesnt exist, create it
 
