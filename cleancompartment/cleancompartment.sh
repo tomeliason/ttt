@@ -50,6 +50,17 @@ cd tf-export
 
 # initialize terraform in this directory, and destroy what was exported in the GBU compartment
 terraform init
+
+# remove tag namespaces since they can only be retired 
+
+arr=( `terraform state list|grep oci_identity_tag_namespace` )
+
+for i in "${arr[@]}"
+do
+	echo $i
+    terraform state rm $i
+done
+
 terraform destroy -auto-approve
 
 echo 'cleancompartment complete'
