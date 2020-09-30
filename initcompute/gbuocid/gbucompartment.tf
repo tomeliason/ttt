@@ -4,7 +4,7 @@ data oci_identity_compartments tenancycompartments {
   compartment_id = "${var.tenancy_ocid}"
   filter {
     name = "name" 
-    values = ["GBU"]
+    values = ["${var.compartment_name}"]
   }
 }
 

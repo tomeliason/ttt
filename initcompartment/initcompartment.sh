@@ -35,6 +35,8 @@ else
     echo 'dynamic group TIMS-oSSH already exists in this OCI tenancy'
 fi 
 
+cd ~
+
 # determine if the identity policy TIMS-oSSH exists 
 ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --query "data[?\"name\" == 'TIMS-oSSH'].name")
 
@@ -43,7 +45,7 @@ ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --query "data[?\"nam
 if [ -z "$ipolicy" ]
 then 
     # change in to the directory to create the TIMS-oSSH dynamic group for the OCI Tenancy
-    cd ttt/initcompartment/timsossh-dynamicgroup
+    cd ttt/initcompartment/timsossh-policy
 
     # execute terraform; initialize, apply to create the TIMS-oSSH dynamic group for the OCI Tenancy
     terraform init
@@ -53,6 +55,8 @@ then
 else
     echo 'policy TIMS-oSSH already exists in this OCI tenancy'
 fi 
+
+cd ~
 
 # change in to the directory to intialize the OCI Tenancy
 cd ttt/initcompartment 
