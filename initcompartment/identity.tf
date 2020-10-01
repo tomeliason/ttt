@@ -57,11 +57,11 @@ resource oci_identity_policy new_Policy {
 #  depends_on           = [oci_identity_compartment.newcompartment]
 #}
 
-output "oci_identity_policy" {
-  description = "New TIMS-oSSH-Users Policy"
-  value = oci_identity_policy.TIMS-oSSH-Users-new.id
-  #value = oci_identity_policy.TIMS-oSSH.id
-}
+#output "oci_identity_policy" {
+#  description = "New TIMS-oSSH-Users Policy"
+#  value = oci_identity_policy.TIMS-oSSH-Users-new.id
+#  #value = oci_identity_policy.TIMS-oSSH.id
+#}
 
 output "oci_identity_compartment" {
   description = "compartment" 
