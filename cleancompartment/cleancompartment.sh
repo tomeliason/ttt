@@ -29,6 +29,8 @@ cd ..
 
 pwd 
 
+oci os bucket list --compartment-id $TF_VAR_compartment_id --query 'data[*]|[*]."name"' 
+
 # cleanup any existing export directory and recreate it
 rm -rf tf-export 
 mkdir tf-export 
@@ -59,6 +61,16 @@ for i in "${arr[@]}"
 do
 	echo $i
     terraform state rm $i
+done
+
+# delete all objects from buckets before terraform deletes the buckets 
+
+array=( ` oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaazkr42p2qrjek63u3a2wgn7wp6pf655q4epjuovfkt3gayaapy6ja --query 'data[*]|[*]."name"' --output json | awk -F '"' '{print $2}' | awk 'NF' ` )
+
+for i in "${array[@]}"
+do
+	echo $i
+    oci os object bulk-delete -bn $i --force
 done
 
 terraform destroy -auto-approve

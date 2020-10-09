@@ -52,12 +52,21 @@
 #terraform init 
 #terraform show
 
-arr=( `terraform state list|grep oci_identity_tag_namespace` )
+#arr=( `terraform state list|grep oci_identity_tag_namespace` )
 
-for i in "${arr[@]}"
+#arro=( `oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaazkr42p2qrjek63u3a2wgn7wp6pf655q4epjuovfkt3gayaapy6ja --query 'data[*]|[*]."name"' `)
+
+#readarray -t values < <(awk -F\" 'NF>=3 {print $4}' `oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaazkr42p2qrjek63u3a2wgn7wp6pf655q4epjuovfkt3gayaapy6ja --query 'data[*]|[*]."name"' `)
+
+#array=( $(sed -n "/{/,/}/{s/[^:]*:[[:blank:]]*//p;}" `oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaazkr42p2qrjek63u3a2wgn7wp6pf655q4epjuovfkt3gayaapy6ja --query 'data[*]|[*]."name"' ` ) )
+
+array=(  ` oci os bucket list --compartment-id ocid1.compartment.oc1..aaaaaaaazkr42p2qrjek63u3a2wgn7wp6pf655q4epjuovfkt3gayaapy6ja --query 'data[*]|[*]."name"' --output json | awk -F '"' '{print $2}' | awk 'NF' ` )
+
+for i in "${array[@]}"
 do
 	echo $i
-    terraform state rm $i
+    oci os object bulk-delete -bn $i --force
+    #terraform state rm $i
 done
 
 
