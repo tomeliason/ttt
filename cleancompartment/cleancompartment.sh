@@ -71,6 +71,15 @@ do
     terraform state rm $i
 done
 
+# remove bucket objects since they have to be pre-deleted before the bucket, and the oci cli command to delete them will eventually remove the objects  
+
+arr=( `terraform state list|grep oci_objectstorage_object` )
+
+for i in "${arr[@]}"
+do
+	echo $i
+    terraform state rm $i
+done
 
 
 terraform destroy -auto-approve
