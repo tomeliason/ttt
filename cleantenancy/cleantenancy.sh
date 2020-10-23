@@ -40,18 +40,18 @@ export TF_VAR_tenancy_ocid=$OCI_TENANCY
 #done 
 
 # cleanup any existing export directory and recreate it
-#rm -rf tf-export 
-#mkdir tf-export 
+rm -rf tf-export 
+mkdir tf-export 
 
 # initialize terraform to get the provider
-#terraform init
+terraform init
 
 # find the provider executable and put it in a variable; the export command applies directly to a provider
-#export TPO=`find . -name *terraform-provider-oci*.*`
+export TPO=`find . -name *terraform-provider-oci*.*`
 
 # execute eval for the export, pass in the compartment, and generate a state
-#eval $TPO -command=export \
-                         -compartment_id=$TF_VAR_compartment_id \
+eval $TPO -command=export \
+                         -compartment_id=TF_VAR_tenancy_ocid \
                          -output_path=tf-export \
                          -generate_state
 
