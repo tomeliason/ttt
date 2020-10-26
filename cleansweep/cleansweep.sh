@@ -51,8 +51,9 @@ export TPO=`find . -name *terraform-provider-oci*.*`
 
 # execute eval for the export, pass in the compartment, and generate a state
 eval $TPO -command=export \
-                         -compartment_id=TF_VAR_tenancy_ocid \
-                         -output_path=tf-export \
+                         -compartment_id=$TF_VAR_tenancy_ocid \
+                         -output_path=tf-export \ 
+                         -services=identity \
                          -generate_state
 
 # change into the export directory; the terraform state is there
