@@ -1,0 +1,1033 @@
+cleansweep
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1
+oci_identity_authentication_policy.export_authentication_policy
+oci_identity_compartment.export_ManagedCompartmentForPaaS
+oci_identity_group.export_Administrators
+oci_identity_identity_provider.export_OracleIdentityCloudService
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1
+oci_identity_policy.export_PSM-mgd-comp-policy
+oci_identity_policy.export_PSM-root-policy
+oci_identity_policy.export_Tenant-Admin-Policy
+oci_identity_user.export_jerry-mabry-oracle-com
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 3.93"
+
+[33m
+[1m[33mWarning: [0m[0m[1mInterpolation-only expressions are deprecated[0m
+
+[0m  on provider.tf line 2, in provider "oci":
+   2: 	tenancy_ocid = [4m"${var.tenancy_ocid}"[0m
+[0m
+Terraform 0.11 and earlier required all non-constant expressions to be
+provided via interpolation syntax, but this pattern is now deprecated. To
+silence this warning, remove the "${ sequence from the start and the }"
+sequence from the end of this expression, leaving just the inner expression.
+
+Template interpolation syntax is still used to construct strings from
+expressions when the template includes multiple interpolation sequences or a
+mixture of literal strings and interpolations. This deprecation applies only
+to templates that consist entirely of a single interpolation sequence.
+
+(and one more similar warning elsewhere)
+[0m[0m
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+
+Initializing the backend...
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 3.93"
+
+Terraform has been successfully initialized!
+oci_identity_authentication_policy.export_authentication_policy: Importing from ID "authenticationPolicies/ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq"...
+oci_identity_authentication_policy.export_authentication_policy: Import complete!
+  Imported oci_identity_authentication_policy
+oci_identity_authentication_policy.export_authentication_policy: Refreshing state... [id=authenticationPolicies/ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Importing from ID "ocid1.compartment.oc1..aaaaaaaaoztte55itx6wc7qq6ruufgiw6g2biyktpxpbaknmcdkljib4glma"...
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaaoztte55itx6wc7qq6ruufgiw6g2biyktpxpbaknmcdkljib4glma]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_t3: Importing from ID "ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq"...
+oci_identity_compartment.export_t3: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_t3: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_PSM-mgd-comp-policy: Importing from ID "ocid1.policy.oc1..aaaaaaaamxd4xkhlz4huco7bfhk3ft7m6r2j777pijkbkq5dpdvyh2mcgdqq"...
+oci_identity_policy.export_PSM-mgd-comp-policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_PSM-mgd-comp-policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaamxd4xkhlz4huco7bfhk3ft7m6r2j777pijkbkq5dpdvyh2mcgdqq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_t32: Importing from ID "ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq"...
+oci_identity_compartment.export_t32: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_t32: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_group.export_Administrators: Importing from ID "ocid1.group.oc1..aaaaaaaambvejgbdhyd63uwzr6qxqydpereoovbqfk2qomxazcjlp2h2tx6q"...
+oci_identity_group.export_Administrators: Import complete!
+  Imported oci_identity_group
+oci_identity_group.export_Administrators: Refreshing state... [id=ocid1.group.oc1..aaaaaaaambvejgbdhyd63uwzr6qxqydpereoovbqfk2qomxazcjlp2h2tx6q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_identity_provider.export_OracleIdentityCloudService: Importing from ID "ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra"...
+oci_identity_identity_provider.export_OracleIdentityCloudService: Import complete!
+  Imported oci_identity_identity_provider
+oci_identity_identity_provider.export_OracleIdentityCloudService: Refreshing state... [id=ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Importing from ID "identityProviders/ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra/groupMappings/ocid1.idpgroupmapping.oc1..aaaaaaaazgipndotqscxiwayfondcay3ztmz3bbm7fz57r3ejcj2xgfifepq"...
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Import complete!
+  Imported oci_identity_idp_group_mapping
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Refreshing state... [id=identityProviders/ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra/groupMappings/ocid1.idpgroupmapping.oc1..aaaaaaaazgipndotqscxiwayfondcay3ztmz3bbm7fz57r3ejcj2xgfifepq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_PSM-root-policy: Importing from ID "ocid1.policy.oc1..aaaaaaaaunkzmavnj2l5dgrp5zukl2f6b5t3abvaxgldjesoupcoj45hdkjq"...
+oci_identity_policy.export_PSM-root-policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_PSM-root-policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaaunkzmavnj2l5dgrp5zukl2f6b5t3abvaxgldjesoupcoj45hdkjq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_Tenant-Admin-Policy: Importing from ID "ocid1.policy.oc1..aaaaaaaacotlma3efbpv4xwp7ucpfftzioge4gk36l4ueabepjrakjewkp2a"...
+oci_identity_policy.export_Tenant-Admin-Policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_Tenant-Admin-Policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaacotlma3efbpv4xwp7ucpfftzioge4gk36l4ueabepjrakjewkp2a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_jerry-mabry-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q"...
+oci_identity_user.export_jerry-mabry-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_jerry-mabry-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq"...
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a"...
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Importing from ID "ocid1.groupmembership.oc1..aaaaaaaaqrkt4oyj5riistvxuf4ddpfylp5zxkf4bj6fiqh3edc6mnpyf4ka"...
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Import complete!
+  Imported oci_identity_user_group_membership
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Refreshing state... [id=ocid1.groupmembership.oc1..aaaaaaaaqrkt4oyj5riistvxuf4ddpfylp5zxkf4bj6fiqh3edc6mnpyf4ka]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "oci" (hashicorp/oci) 4.0.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 4.0"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1
+Removed oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1
+Removed oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1
+Removed oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_authentication_policy.export_authentication_policy
+Removed oci_identity_authentication_policy.export_authentication_policy
+Successfully removed 1 resource instance(s).
+oci_identity_compartment.export_ManagedCompartmentForPaaS
+Removed oci_identity_compartment.export_ManagedCompartmentForPaaS
+Successfully removed 1 resource instance(s).
+oci_identity_group.export_Administrators
+Removed oci_identity_group.export_Administrators
+Successfully removed 1 resource instance(s).
+oci_identity_identity_provider.export_OracleIdentityCloudService
+Removed oci_identity_identity_provider.export_OracleIdentityCloudService
+Successfully removed 1 resource instance(s).
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1
+Removed oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_PSM-mgd-comp-policy
+Removed oci_identity_policy.export_PSM-mgd-comp-policy
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_PSM-root-policy
+Removed oci_identity_policy.export_PSM-root-policy
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_Tenant-Admin-Policy
+Removed oci_identity_policy.export_Tenant-Admin-Policy
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_jerry-mabry-oracle-com
+Removed oci_identity_user.export_jerry-mabry-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com
+Removed oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com
+Removed oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1
+Removed oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1
+Successfully removed 1 resource instance(s).
+ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq
+ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq
+ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq
+
+Initializing the backend...
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 3.93"
+
+Terraform has been successfully initialized!
+oci_core_internet_gateway.export_Internet-Gateway-vcnt3: Importing from ID "ocid1.internetgateway.oc1.iad.aaaaaaaafkqlimv6qunbvcmo5o3mh3zharqu6ede6ps2qm6qjyhujdga3u5a"...
+oci_core_internet_gateway.export_Internet-Gateway-vcnt3: Import complete!
+  Imported oci_core_internet_gateway
+oci_core_internet_gateway.export_Internet-Gateway-vcnt3: Refreshing state... [id=ocid1.internetgateway.oc1.iad.aaaaaaaafkqlimv6qunbvcmo5o3mh3zharqu6ede6ps2qm6qjyhujdga3u5a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za: Importing from ID "ocid1.publicip.oc1.iad.aaaaaaaax7kcs3n53euzfrw5her6lrjurjxjgpi34uprlj6s3lwfgutw53ca"...
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za: Import complete!
+  Imported oci_core_public_ip
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za: Refreshing state... [id=ocid1.publicip.oc1.iad.aaaaaaaax7kcs3n53euzfrw5her6lrjurjxjgpi34uprlj6s3lwfgutw53ca]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_service_gateway.export_Service-Gateway-vcnt3: Importing from ID "ocid1.servicegateway.oc1.iad.aaaaaaaazqo55lvrcor4aq2dwwlfjg5y4oalgjs4p6irdwiow2bjitb4dvaa"...
+oci_core_service_gateway.export_Service-Gateway-vcnt3: Import complete!
+  Imported oci_core_service_gateway
+oci_core_service_gateway.export_Service-Gateway-vcnt3: Refreshing state... [id=ocid1.servicegateway.oc1.iad.aaaaaaaazqo55lvrcor4aq2dwwlfjg5y4oalgjs4p6irdwiow2bjitb4dvaa]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_subnet.export_Private-Subnet-vcnt3: Importing from ID "ocid1.subnet.oc1.iad.aaaaaaaay4khhluz2urlvbiodsoskr5ioe2k4dnblyxut4wghoylbzf4lbmq"...
+oci_core_subnet.export_Private-Subnet-vcnt3: Import complete!
+  Imported oci_core_subnet
+oci_core_subnet.export_Private-Subnet-vcnt3: Refreshing state... [id=ocid1.subnet.oc1.iad.aaaaaaaay4khhluz2urlvbiodsoskr5ioe2k4dnblyxut4wghoylbzf4lbmq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_subnet.export_Public-Subnet-vcnt3: Importing from ID "ocid1.subnet.oc1.iad.aaaaaaaa26ueqm3edigc76747o3b73kircy3o65echwdg4gnodeb7ms4rywq"...
+oci_core_subnet.export_Public-Subnet-vcnt3: Import complete!
+  Imported oci_core_subnet
+oci_core_subnet.export_Public-Subnet-vcnt3: Refreshing state... [id=ocid1.subnet.oc1.iad.aaaaaaaa26ueqm3edigc76747o3b73kircy3o65echwdg4gnodeb7ms4rywq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_vcn.export_vcnt3: Importing from ID "ocid1.vcn.oc1.iad.amaaaaaafydlfxaapvhajlqd7zn3pcszwpzbuifr2iyswuabvec3cel2yhxa"...
+oci_core_vcn.export_vcnt3: Import complete!
+  Imported oci_core_vcn
+oci_core_vcn.export_vcnt3: Refreshing state... [id=ocid1.vcn.oc1.iad.amaaaaaafydlfxaapvhajlqd7zn3pcszwpzbuifr2iyswuabvec3cel2yhxa]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt3: Importing from ID "ocid1.dhcpoptions.oc1.iad.aaaaaaaa5btuzo4bdle4f4kka63yfmwwvwpxlolchwclptpm3oaga6ptw3ga"...
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt3: Import complete!
+  Imported oci_core_default_dhcp_options
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt3: Refreshing state... [id=ocid1.dhcpoptions.oc1.iad.aaaaaaaa5btuzo4bdle4f4kka63yfmwwvwpxlolchwclptpm3oaga6ptw3ga]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_nat_gateway.export_NAT-Gateway-vcnt3: Importing from ID "ocid1.natgateway.oc1.iad.aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za"...
+oci_core_nat_gateway.export_NAT-Gateway-vcnt3: Import complete!
+  Imported oci_core_nat_gateway
+oci_core_nat_gateway.export_NAT-Gateway-vcnt3: Refreshing state... [id=ocid1.natgateway.oc1.iad.aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt3: Importing from ID "ocid1.routetable.oc1.iad.aaaaaaaa43cmykrbof256s4bpk6z5pi3v5ul4nxjpuy5kknqcr5wdttjlxtq"...
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt3: Import complete!
+  Imported oci_core_route_table
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt3: Refreshing state... [id=ocid1.routetable.oc1.iad.aaaaaaaa43cmykrbof256s4bpk6z5pi3v5ul4nxjpuy5kknqcr5wdttjlxtq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt3: Importing from ID "ocid1.routetable.oc1.iad.aaaaaaaa54bghxg66lriwbxvj2slnt6rn5wkd4qdnrwwzguz53ebugklrn7a"...
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt3: Import complete!
+  Imported oci_core_default_route_table
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt3: Refreshing state... [id=ocid1.routetable.oc1.iad.aaaaaaaa54bghxg66lriwbxvj2slnt6rn5wkd4qdnrwwzguz53ebugklrn7a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt3: Importing from ID "ocid1.securitylist.oc1.iad.aaaaaaaadetjkdojjwc4mgkij6gpt76lma77kwvyetsudf36fe3pyog2kh4q"...
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt3: Import complete!
+  Imported oci_core_security_list
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt3: Refreshing state... [id=ocid1.securitylist.oc1.iad.aaaaaaaadetjkdojjwc4mgkij6gpt76lma77kwvyetsudf36fe3pyog2kh4q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_security_list.export_Default-Security-List-for-vcnt3: Importing from ID "ocid1.securitylist.oc1.iad.aaaaaaaai5367hln6wmegowhbfiqtf6qcugxzpcdx5fwnot6wizxvca6qpda"...
+oci_core_default_security_list.export_Default-Security-List-for-vcnt3: Import complete!
+  Imported oci_core_default_security_list
+oci_core_default_security_list.export_Default-Security-List-for-vcnt3: Refreshing state... [id=ocid1.securitylist.oc1.iad.aaaaaaaai5367hln6wmegowhbfiqtf6qcugxzpcdx5fwnot6wizxvca6qpda]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "oci" (hashicorp/oci) 4.0.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 4.0"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+terraform would destroy in compartment ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt3
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt3
+oci_core_default_security_list.export_Default-Security-List-for-vcnt3
+oci_core_internet_gateway.export_Internet-Gateway-vcnt3
+oci_core_nat_gateway.export_NAT-Gateway-vcnt3
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaauoeuu2zzvayfxaraqyz7gyjhpfoi2bb2427vjznilgfgt73rm4za
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt3
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt3
+oci_core_service_gateway.export_Service-Gateway-vcnt3
+oci_core_subnet.export_Private-Subnet-vcnt3
+oci_core_subnet.export_Public-Subnet-vcnt3
+oci_core_vcn.export_vcnt3
+ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq
+
+Initializing the backend...
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 3.93"
+
+Terraform has been successfully initialized!
+oci_core_internet_gateway.export_Internet-Gateway-vcnt32: Importing from ID "ocid1.internetgateway.oc1.iad.aaaaaaaapzvs3ask2e2sogmkjyp2qgznxuw26dttqh2i7h7vu4gqnk6qd57q"...
+oci_core_internet_gateway.export_Internet-Gateway-vcnt32: Import complete!
+  Imported oci_core_internet_gateway
+oci_core_internet_gateway.export_Internet-Gateway-vcnt32: Refreshing state... [id=ocid1.internetgateway.oc1.iad.aaaaaaaapzvs3ask2e2sogmkjyp2qgznxuw26dttqh2i7h7vu4gqnk6qd57q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua: Importing from ID "ocid1.publicip.oc1.iad.aaaaaaaaltow6itdm5tu4i2s3qly42yce5j3a73w4zsngsnyy374cohzmvbq"...
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua: Import complete!
+  Imported oci_core_public_ip
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua: Refreshing state... [id=ocid1.publicip.oc1.iad.aaaaaaaaltow6itdm5tu4i2s3qly42yce5j3a73w4zsngsnyy374cohzmvbq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_service_gateway.export_Service-Gateway-vcnt32: Importing from ID "ocid1.servicegateway.oc1.iad.aaaaaaaaabs6xkrxkg2mhqyghhrajrlxeiv6dj4ccuayxvpxneveyngj6h3q"...
+oci_core_service_gateway.export_Service-Gateway-vcnt32: Import complete!
+  Imported oci_core_service_gateway
+oci_core_service_gateway.export_Service-Gateway-vcnt32: Refreshing state... [id=ocid1.servicegateway.oc1.iad.aaaaaaaaabs6xkrxkg2mhqyghhrajrlxeiv6dj4ccuayxvpxneveyngj6h3q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_subnet.export_Public-Subnet-vcnt32: Importing from ID "ocid1.subnet.oc1.iad.aaaaaaaacfy7ktxo72amqvehdgrvbghxkncuf5niwcwuiperfke5lporbygq"...
+oci_core_subnet.export_Public-Subnet-vcnt32: Import complete!
+  Imported oci_core_subnet
+oci_core_subnet.export_Public-Subnet-vcnt32: Refreshing state... [id=ocid1.subnet.oc1.iad.aaaaaaaacfy7ktxo72amqvehdgrvbghxkncuf5niwcwuiperfke5lporbygq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_subnet.export_Private-Subnet-vcnt32: Importing from ID "ocid1.subnet.oc1.iad.aaaaaaaarxupwsxkeggervxsb6mo6r4jeofyq5t4437y2kmm3povp3b45o3q"...
+oci_core_subnet.export_Private-Subnet-vcnt32: Import complete!
+  Imported oci_core_subnet
+oci_core_subnet.export_Private-Subnet-vcnt32: Refreshing state... [id=ocid1.subnet.oc1.iad.aaaaaaaarxupwsxkeggervxsb6mo6r4jeofyq5t4437y2kmm3povp3b45o3q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_vcn.export_vcnt32: Importing from ID "ocid1.vcn.oc1.iad.amaaaaaafydlfxaatkdw4op5bqrqos77qfjsmks57ldpk7wfndisqlqws3lq"...
+oci_core_vcn.export_vcnt32: Import complete!
+  Imported oci_core_vcn
+oci_core_vcn.export_vcnt32: Refreshing state... [id=ocid1.vcn.oc1.iad.amaaaaaafydlfxaatkdw4op5bqrqos77qfjsmks57ldpk7wfndisqlqws3lq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt32: Importing from ID "ocid1.dhcpoptions.oc1.iad.aaaaaaaa2e4ex2muowsgry2ucwolmjosamrqzc77u6ctvkawkyh6im6pufla"...
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt32: Import complete!
+  Imported oci_core_default_dhcp_options
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt32: Refreshing state... [id=ocid1.dhcpoptions.oc1.iad.aaaaaaaa2e4ex2muowsgry2ucwolmjosamrqzc77u6ctvkawkyh6im6pufla]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_nat_gateway.export_NAT-Gateway-vcnt32: Importing from ID "ocid1.natgateway.oc1.iad.aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua"...
+oci_core_nat_gateway.export_NAT-Gateway-vcnt32: Import complete!
+  Imported oci_core_nat_gateway
+oci_core_nat_gateway.export_NAT-Gateway-vcnt32: Refreshing state... [id=ocid1.natgateway.oc1.iad.aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt32: Importing from ID "ocid1.routetable.oc1.iad.aaaaaaaawbukrm6a4gp2hbtmrreqt26jzrygviafoncfze46elnhpwstc2na"...
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt32: Import complete!
+  Imported oci_core_route_table
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt32: Refreshing state... [id=ocid1.routetable.oc1.iad.aaaaaaaawbukrm6a4gp2hbtmrreqt26jzrygviafoncfze46elnhpwstc2na]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt32: Importing from ID "ocid1.routetable.oc1.iad.aaaaaaaamogwbenry7wbgucuchgfpa6dr4bphszy2j4ewer4oe3wq5lijxza"...
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt32: Import complete!
+  Imported oci_core_default_route_table
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt32: Refreshing state... [id=ocid1.routetable.oc1.iad.aaaaaaaamogwbenry7wbgucuchgfpa6dr4bphszy2j4ewer4oe3wq5lijxza]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt32: Importing from ID "ocid1.securitylist.oc1.iad.aaaaaaaa5ujrvhncxdsvd3xoz6l7mgx4ulq66rnsxomvnsbe5tacs7xyn6jq"...
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt32: Import complete!
+  Imported oci_core_security_list
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt32: Refreshing state... [id=ocid1.securitylist.oc1.iad.aaaaaaaa5ujrvhncxdsvd3xoz6l7mgx4ulq66rnsxomvnsbe5tacs7xyn6jq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_core_default_security_list.export_Default-Security-List-for-vcnt32: Importing from ID "ocid1.securitylist.oc1.iad.aaaaaaaak5guyisx6b56neumfvidbniesrsqncgrewurci5iuthlpgaev6ka"...
+oci_core_default_security_list.export_Default-Security-List-for-vcnt32: Import complete!
+  Imported oci_core_default_security_list
+oci_core_default_security_list.export_Default-Security-List-for-vcnt32: Refreshing state... [id=ocid1.securitylist.oc1.iad.aaaaaaaak5guyisx6b56neumfvidbniesrsqncgrewurci5iuthlpgaev6ka]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "oci" (hashicorp/oci) 4.0.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 4.0"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+terraform would destroy in compartment ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq
+oci_core_default_dhcp_options.export_Default-DHCP-Options-for-vcnt32
+oci_core_default_route_table.export_Default-Route-Table-for-vcnt32
+oci_core_default_security_list.export_Default-Security-List-for-vcnt32
+oci_core_internet_gateway.export_Internet-Gateway-vcnt32
+oci_core_nat_gateway.export_NAT-Gateway-vcnt32
+oci_core_public_ip.export_IP-for-NAT-gateway-ocid1-natgateway-oc1-iad-aaaaaaaas4wsrxhup3akajoihvrhco5ijabvcdpsulw4shyrcdcb2f6pcwua
+oci_core_route_table.export_Route-Table-for-Private-Subnet-vcnt32
+oci_core_security_list.export_Security-List-for-Private-Subnet-vcnt32
+oci_core_service_gateway.export_Service-Gateway-vcnt32
+oci_core_subnet.export_Private-Subnet-vcnt32
+oci_core_subnet.export_Public-Subnet-vcnt32
+oci_core_vcn.export_vcnt32
+
+Initializing the backend...
+
+Initializing provider plugins...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 3.93"
+
+Terraform has been successfully initialized!
+oci_identity_authentication_policy.export_authentication_policy: Importing from ID "authenticationPolicies/ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq"...
+oci_identity_authentication_policy.export_authentication_policy: Import complete!
+  Imported oci_identity_authentication_policy
+oci_identity_authentication_policy.export_authentication_policy: Refreshing state... [id=authenticationPolicies/ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Importing from ID "ocid1.compartment.oc1..aaaaaaaaoztte55itx6wc7qq6ruufgiw6g2biyktpxpbaknmcdkljib4glma"...
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_ManagedCompartmentForPaaS: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaaoztte55itx6wc7qq6ruufgiw6g2biyktpxpbaknmcdkljib4glma]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_t3: Importing from ID "ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq"...
+oci_identity_compartment.export_t3: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_t3: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaasr76ay54v5abmdtz2vryalflysp7wrvl6u4424wkayp5mo66vgkq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_PSM-mgd-comp-policy: Importing from ID "ocid1.policy.oc1..aaaaaaaamxd4xkhlz4huco7bfhk3ft7m6r2j777pijkbkq5dpdvyh2mcgdqq"...
+oci_identity_policy.export_PSM-mgd-comp-policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_PSM-mgd-comp-policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaamxd4xkhlz4huco7bfhk3ft7m6r2j777pijkbkq5dpdvyh2mcgdqq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_compartment.export_t32: Importing from ID "ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq"...
+oci_identity_compartment.export_t32: Import complete!
+  Imported oci_identity_compartment
+oci_identity_compartment.export_t32: Refreshing state... [id=ocid1.compartment.oc1..aaaaaaaa4p3u3qvkqcnkrvrmhoscldn3f6wrvnwu7kpygerna6nmeioysrzq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_group.export_Administrators: Importing from ID "ocid1.group.oc1..aaaaaaaambvejgbdhyd63uwzr6qxqydpereoovbqfk2qomxazcjlp2h2tx6q"...
+oci_identity_group.export_Administrators: Import complete!
+  Imported oci_identity_group
+oci_identity_group.export_Administrators: Refreshing state... [id=ocid1.group.oc1..aaaaaaaambvejgbdhyd63uwzr6qxqydpereoovbqfk2qomxazcjlp2h2tx6q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_identity_provider.export_OracleIdentityCloudService: Importing from ID "ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra"...
+oci_identity_identity_provider.export_OracleIdentityCloudService: Import complete!
+  Imported oci_identity_identity_provider
+oci_identity_identity_provider.export_OracleIdentityCloudService: Refreshing state... [id=ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Importing from ID "identityProviders/ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra/groupMappings/ocid1.idpgroupmapping.oc1..aaaaaaaazgipndotqscxiwayfondcay3ztmz3bbm7fz57r3ejcj2xgfifepq"...
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Import complete!
+  Imported oci_identity_idp_group_mapping
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1: Refreshing state... [id=identityProviders/ocid1.saml2idp.oc1..aaaaaaaavp6gbkcle75kh6anpgq7h274ufap5ibszgjeuymqgjjz677uvdra/groupMappings/ocid1.idpgroupmapping.oc1..aaaaaaaazgipndotqscxiwayfondcay3ztmz3bbm7fz57r3ejcj2xgfifepq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_PSM-root-policy: Importing from ID "ocid1.policy.oc1..aaaaaaaaunkzmavnj2l5dgrp5zukl2f6b5t3abvaxgldjesoupcoj45hdkjq"...
+oci_identity_policy.export_PSM-root-policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_PSM-root-policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaaunkzmavnj2l5dgrp5zukl2f6b5t3abvaxgldjesoupcoj45hdkjq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_policy.export_Tenant-Admin-Policy: Importing from ID "ocid1.policy.oc1..aaaaaaaacotlma3efbpv4xwp7ucpfftzioge4gk36l4ueabepjrakjewkp2a"...
+oci_identity_policy.export_Tenant-Admin-Policy: Import complete!
+  Imported oci_identity_policy
+oci_identity_policy.export_Tenant-Admin-Policy: Refreshing state... [id=ocid1.policy.oc1..aaaaaaaacotlma3efbpv4xwp7ucpfftzioge4gk36l4ueabepjrakjewkp2a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_jerry-mabry-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q"...
+oci_identity_user.export_jerry-mabry-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_jerry-mabry-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq"...
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Importing from ID "ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a"...
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Import complete!
+  Imported oci_identity_user
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com: Refreshing state... [id=ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaaqa7hff45p4v3ynzxxmcthzqvbpbl4fepjsohywl7gvw5pxpwj55q/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Importing from ID "ocid1.groupmembership.oc1..aaaaaaaaqrkt4oyj5riistvxuf4ddpfylp5zxkf4bj6fiqh3edc6mnpyf4ka"...
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Import complete!
+  Imported oci_identity_user_group_membership
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1: Refreshing state... [id=ocid1.groupmembership.oc1..aaaaaaaaqrkt4oyj5riistvxuf4ddpfylp5zxkf4bj6fiqh3edc6mnpyf4ka]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaadne7loysgn3qxndp2pestaqt63yi2uipk5s4rvbtzcm3ssvbxohq/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Importing from ID "users/ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3"...
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Import complete!
+  Imported oci_identity_api_key
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1: Refreshing state... [id=users/ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a/apiKeys/af:05:58:d1:7b:22:86:54:24:4f:38:7f:b4:ae:8e:b3]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag_default.export_tag_default_1: Importing from ID "ocid1.tagdefault.oc1..aaaaaaaacrx6k7luxgukrbxkfdmqfae7wrk5y7lm4qq3qrgygb7fjtm7djxa"...
+oci_identity_tag_default.export_tag_default_1: Import complete!
+  Imported oci_identity_tag_default
+oci_identity_tag_default.export_tag_default_1: Refreshing state... [id=ocid1.tagdefault.oc1..aaaaaaaacrx6k7luxgukrbxkfdmqfae7wrk5y7lm4qq3qrgygb7fjtm7djxa]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag_default.export_tag_default_2: Importing from ID "ocid1.tagdefault.oc1..aaaaaaaahuuvpsxiofjrzb7okx26b22xtef53io6k2kxqpjmxtzanhmeikqq"...
+oci_identity_tag_default.export_tag_default_2: Import complete!
+  Imported oci_identity_tag_default
+oci_identity_tag_default.export_tag_default_2: Refreshing state... [id=ocid1.tagdefault.oc1..aaaaaaaahuuvpsxiofjrzb7okx26b22xtef53io6k2kxqpjmxtzanhmeikqq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag_namespace.export_Oracle-Tags: Importing from ID "ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq"...
+oci_identity_tag_namespace.export_Oracle-Tags: Import complete!
+  Imported oci_identity_tag_namespace
+oci_identity_tag_namespace.export_Oracle-Tags: Refreshing state... [id=ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag_namespace.export_OracleInternalReserved: Importing from ID "ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla"...
+oci_identity_tag_namespace.export_OracleInternalReserved: Import complete!
+  Imported oci_identity_tag_namespace
+oci_identity_tag_namespace.export_OracleInternalReserved: Refreshing state... [id=ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag.export_CreatedBy: Importing from ID "tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq/tags/CreatedBy"...
+oci_identity_tag.export_CreatedBy: Import complete!
+  Imported oci_identity_tag
+oci_identity_tag.export_CreatedBy: Refreshing state... [id=tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq/tags/CreatedBy]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag.export_CreatedOn: Importing from ID "tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq/tags/CreatedOn"...
+oci_identity_tag.export_CreatedOn: Import complete!
+  Imported oci_identity_tag
+oci_identity_tag.export_CreatedOn: Refreshing state... [id=tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaac7blx5ltod3dxty6k7k32tnim64wx4z33bdleomr63ds4dupgzvq/tags/CreatedOn]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag.export_GroupEmail: Importing from ID "tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/GroupEmail"...
+oci_identity_tag.export_GroupEmail: Import complete!
+  Imported oci_identity_tag
+oci_identity_tag.export_GroupEmail: Refreshing state... [id=tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/GroupEmail]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag.export_ServiceType: Importing from ID "tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/ServiceType"...
+oci_identity_tag.export_ServiceType: Import complete!
+  Imported oci_identity_tag
+oci_identity_tag.export_ServiceType: Refreshing state... [id=tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/ServiceType]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+oci_identity_tag.export_UsageType: Importing from ID "tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/UsageType"...
+oci_identity_tag.export_UsageType: Import complete!
+  Imported oci_identity_tag
+oci_identity_tag.export_UsageType: Refreshing state... [id=tagNamespaces/ocid1.tagnamespace.oc1..aaaaaaaa3tt5paganrksrh3edhkq6helaqarooj3i2f26mzkdm2jqrwszmla/tags/UsageType]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Checking for available provider plugins...
+- Downloading plugin for provider "oci" (hashicorp/oci) 4.0.0...
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.oci: version = "~> 4.0"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1
+Removed oci_identity_api_key.export_jerry-mabry-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1
+Removed oci_identity_api_key.export_oracleidentitycloudservice-tom-eliason-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1
+Removed oci_identity_api_key.export_oracleidentitycloudservice-jerry-mabry-oracle-com_api_key_1
+Successfully removed 1 resource instance(s).
+oci_identity_authentication_policy.export_authentication_policy
+Removed oci_identity_authentication_policy.export_authentication_policy
+Successfully removed 1 resource instance(s).
+oci_identity_compartment.export_ManagedCompartmentForPaaS
+Removed oci_identity_compartment.export_ManagedCompartmentForPaaS
+Successfully removed 1 resource instance(s).
+oci_identity_group.export_Administrators
+Removed oci_identity_group.export_Administrators
+Successfully removed 1 resource instance(s).
+oci_identity_identity_provider.export_OracleIdentityCloudService
+Removed oci_identity_identity_provider.export_OracleIdentityCloudService
+Successfully removed 1 resource instance(s).
+oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1
+Removed oci_identity_idp_group_mapping.export_OracleIdentityCloudService_idp_group_mapping_1
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_PSM-mgd-comp-policy
+Removed oci_identity_policy.export_PSM-mgd-comp-policy
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_PSM-root-policy
+Removed oci_identity_policy.export_PSM-root-policy
+Successfully removed 1 resource instance(s).
+oci_identity_policy.export_Tenant-Admin-Policy
+Removed oci_identity_policy.export_Tenant-Admin-Policy
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_jerry-mabry-oracle-com
+Removed oci_identity_user.export_jerry-mabry-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com
+Removed oci_identity_user.export_oracleidentitycloudservice-jerry-mabry-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com
+Removed oci_identity_user.export_oracleidentitycloudservice-tom-eliason-oracle-com
+Successfully removed 1 resource instance(s).
+oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1
+Removed oci_identity_user_group_membership.export_jerry-mabry-oracle-com_user_group_membership_1
+Successfully removed 1 resource instance(s).
+oci_identity_tag_namespace.export_Oracle-Tags
+Removed oci_identity_tag_namespace.export_Oracle-Tags
+Successfully removed 1 resource instance(s).
+oci_identity_tag_namespace.export_OracleInternalReserved
+Removed oci_identity_tag_namespace.export_OracleInternalReserved
+Successfully removed 1 resource instance(s).
+terraform would destroy in compartment ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq 
+oci_identity_compartment.export_t3
+oci_identity_compartment.export_t32
+oci_identity_tag.export_CreatedBy
+oci_identity_tag.export_CreatedOn
+oci_identity_tag.export_GroupEmail
+oci_identity_tag.export_ServiceType
+oci_identity_tag.export_UsageType
+oci_identity_tag_default.export_tag_default_1
+oci_identity_tag_default.export_tag_default_2
+cleansweep complete
