@@ -15,6 +15,14 @@ read -p "enter the name of the compartment you wish to create: " compartment_nam
 echo ${compartment_name}
 export TF_VAR_compartment_name=${compartment_name}
 
+# cleanup and leftovers from previous execution runs
+rm -rf .terraform.d 
+rm -rf .terraform
+rm -rf ttt/initcompartment/.terraform
+rm -rf ttt/initcompartment/.terraform.d
+rm -rt ttt/initcompartment/terraform.tfstate
+rm -rt ttt/initcompartment/terraform.tfstate.backup
+
 # determine if the dynamic group TIMS-oSSH exists 
 idgroup=$(oci iam dynamic-group list --lifecycle-state ACTIVE --query "data[?\"name\" == 'TIMS-oSSH'].name")
 
