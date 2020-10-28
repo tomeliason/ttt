@@ -97,9 +97,18 @@ do
     cd tf-export-compartment 
     terraform init
 
+    # remove tag namespaces since they can only be retired 
+    arr=( `terraform state list|grep compartment` )
+
+    for i in "${arr[@]}"
+    do
+	    echo $i
+        terraform state rm $i
+    done
+
     echo "terraform would destroy in compartment $i"
     terraform state list 
-    #terraform destroy -auto-approve
+    terraform destroy -auto-approve
 
     cd ..
 
@@ -145,6 +154,6 @@ done
 echo "terraform would destroy in compartment $TF_VAR_tenancy_ocid "
 terraform state list 
 
-#terraform destroy -auto-approve
+terraform destroy -auto-approve
 
 echo 'cleansweep complete'
