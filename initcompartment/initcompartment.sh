@@ -10,6 +10,8 @@ echo 'initcompartment'
 # obtain the tenancy OCID from the environment in the OIC Cloud Shell 
 export TF_VAR_tenancy_ocid=$OCI_TENANCY
 
+echo 'working in tenancy ' `oci iam tenancy get --tenancy-id $OCI_TENANCY --query 'data."name"' --output json  `
+
 read -p "enter the name of the compartment you wish to create: " compartment_name
 
 echo ${compartment_name}
@@ -20,8 +22,8 @@ rm -rf .terraform.d
 rm -rf .terraform
 rm -rf ttt/initcompartment/.terraform
 rm -rf ttt/initcompartment/.terraform.d
-rm -rt ttt/initcompartment/terraform.tfstate
-rm -rt ttt/initcompartment/terraform.tfstate.backup
+rm -rf ttt/initcompartment/terraform.tfstate
+rm -rf ttt/initcompartment/terraform.tfstate.backup
 
 # determine if the dynamic group TIMS-oSSH exists 
 idgroup=$(oci iam dynamic-group list --lifecycle-state ACTIVE --query "data[?\"name\" == 'TIMS-oSSH'].name")
@@ -39,11 +41,14 @@ then
     terraform apply -auto-approve
 
     echo 'created dynamic group TIMS-oSSH for the OCI tenancy' 
+    
+    cd ../../../
+    pwd
+
 else
     echo 'dynamic group TIMS-oSSH already exists in this OCI tenancy'
 fi 
 
-cd ~
 
 # determine if the identity policy TIMS-oSSH exists 
 ipolicy=$(oci iam policy list --compartment-id $OCI_TENANCY --query "data[?\"name\" == 'TIMS-oSSH'].name")
@@ -64,15 +69,28 @@ else
     echo 'policy TIMS-oSSH already exists in this OCI tenancy'
 fi 
 
-cd ~
+# determine if the compartment exists 
+icompartment=$(oci iam compartment list --query 'data[*]|[*]."name"' --output json | awk -F '"' '{print $2}' | awk 'NF' |grep -w $TF_VAR_compartment_name)
 
-# change in to the directory to intialize the OCI Tenancy
-cd ttt/initcompartment 
+# if identity compartment doesn't exist, create it
 
-# execute terraform; initialize, apply to initialize the OCI Tenancy
-terraform init
-terraform plan
-terraform apply -auto-approve
+if [ -z "$icompartment" ]
+then 
+    cd ../../..
+    pwd
+
+    # change in to the directory to intialize the OCI Tenancy compartment
+    cd ttt/initcompartment 
+
+    # execute terraform; initialize, apply to initialize the OCI Tenancy compartment
+    terraform init
+    terraform plan
+    terraform apply -auto-approve
+
+    echo 'created compartment ' ${compartment_name} ' for the OCI tenancy' 
+else
+    echo 'compartment ' ${compartment_name} ' already exists in this OCI tenancy'
+fi 
 
 echo 'initcompartment - complete - for compartment ' ${compartment_name}
 
