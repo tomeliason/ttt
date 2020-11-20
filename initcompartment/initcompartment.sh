@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash 
 #########################################################################################################
 #
 # SCRIPT:            initcompartment.sh       
@@ -17,14 +17,6 @@ read -p "enter the name of the compartment you wish to create: " compartment_nam
 echo ${compartment_name}
 export TF_VAR_compartment_name=${compartment_name}
 
-# cleanup and leftovers from previous execution runs
-rm -rf .terraform.d 
-rm -rf .terraform
-rm -rf ttt/initcompartment/.terraform
-rm -rf ttt/initcompartment/.terraform.d
-rm -rf ttt/initcompartment/terraform.tfstate
-rm -rf ttt/initcompartment/terraform.tfstate.backup
-
 # determine if the dynamic group TIMS-oSSH exists 
 idgroup=$(oci iam dynamic-group list --lifecycle-state ACTIVE --query "data[?\"name\" == 'TIMS-oSSH'].name")
 
@@ -34,6 +26,12 @@ if [ -z "$idgroup" ]
 then 
     # change in to the directory to create the TIMS-oSSH dynamic group for the OCI Tenancy
     cd ttt/initcompartment/timsossh-dynamicgroup
+
+    rm -rf .terraform.d 
+    rm -rf .terraform
+    rm -rf terraform.tfstate
+    rm -rf terraform.tfstate.*
+    rm -rf .terraform.tfstate.*
 
     # execute terraform; initialize, apply to create the TIMS-oSSH dynamic group for the OCI Tenancy
     terraform init
@@ -60,11 +58,22 @@ then
     # change in to the directory to create the TIMS-oSSH dynamic group for the OCI Tenancy
     cd ttt/initcompartment/timsossh-policy
 
+    rm -rf .terraform.d 
+    rm -rf .terraform
+    rm -rf terraform.tfstate
+    rm -rf terraform.tfstate.*
+    rm -rf .terraform.tfstate.*
+
     # execute terraform; initialize, apply to create the TIMS-oSSH dynamic group for the OCI Tenancy
     terraform init
     terraform plan
     terraform apply -auto-approve
+
     echo 'created policy TIMS-oSSH for the OCI tenancy' 
+
+    cd ../../../
+    pwd
+
 else
     echo 'policy TIMS-oSSH already exists in this OCI tenancy'
 fi 
@@ -76,11 +85,15 @@ icompartment=$(oci iam compartment list --query 'data[*]|[*]."name"' --output js
 
 if [ -z "$icompartment" ]
 then 
-    cd ../../..
-    pwd
 
     # change in to the directory to intialize the OCI Tenancy compartment
     cd ttt/initcompartment 
+
+    rm -rf .terraform.d 
+    rm -rf .terraform
+    rm -rf terraform.tfstate
+    rm -rf terraform.tfstate.*
+    rm -rf .terraform.tfstate.*
 
     # execute terraform; initialize, apply to initialize the OCI Tenancy compartment
     terraform init
@@ -93,5 +106,3 @@ else
 fi 
 
 echo 'initcompartment - complete - for compartment ' ${compartment_name}
-
-
