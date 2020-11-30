@@ -6,7 +6,10 @@ This is a set of utility scripts implemented to support the GBU T3 program, docu
 
 ## Initializing a Compartment 
 
-The initcompartment directory
+The initcompartment directory is used to create and configure a compartment for a GBU to access and use OCI services within that compartment, in a TIMS-compliant manner. 
+
+### Prerequisites 
+
 
 ## Cleaning a Compartment 
 
