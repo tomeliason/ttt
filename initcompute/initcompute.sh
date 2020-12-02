@@ -52,23 +52,7 @@ terraform plan
 
 # execute the terraform by applying and auto-approve
 
-#terraform apply -auto-approve
-
-# find the provider executable and put it in a variable; the export command applies directly to a provider
-#export TPO=`find . -name *terraform-provider-oci*.*`
-
-# execute eval for the export, pass in the compartment, and generate a state
-#eval $TPO -command=export \
-#                         -compartment_id=$TF_VAR_compartment_id \
-#                         -output_path=tf-export \
-#                         -generate_state
-
-# change into the export directory; the terraform state is there
-#cd tf-export
-
-# initialize terraform in this directory, and destroy what was exported in the GBU compartment
-#terraform init
-#terraform destroy -auto-approve
+terraform apply -auto-approve
 
 echo 'initcompute complete'
 

@@ -7,6 +7,7 @@
 
 echo 'cloud-init'
 
+pkill yum 
 yum update -y 
 yum install -y curl openssh-server 
 curl https://tims.oraclecloud.com/yum/install.sh | sudo bash
