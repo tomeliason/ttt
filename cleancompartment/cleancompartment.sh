@@ -31,11 +31,11 @@ cd ..
 
 pwd 
 
-echo 'cleancompartment - removing objects from buckets' 
+echo "cleancompartment - removing objects from buckets"
 
 # delete all objects from buckets before terraform deletes the buckets 
 
-array=( ` oci os bucket list --compartment-id  $TF_VAR_compartment_id --query 'data[*]|[*]."name"' 
+array=( ` oci os bucket list --compartment-id  $TF_VAR_compartment_id --query 'data[*]|[*]."name"' `) 
 
 
 for i in "${array[@]}"
@@ -58,7 +58,8 @@ echo 'cleancompartment - finding the terraform provider '
 # find the provider executable and put it in a variable; the export command applies directly to a provider
 export TPO=`find . -name *terraform-provider-oci*.*`
 
-echo 'cleancompartment - terraform provider: ' $TPO 
+echo 'cleancompartment - terraform provider ' 
+echo $TPO 
 
 # execute eval for the export, pass in the compartment, and generate a state
 eval $TPO -command=export \
@@ -76,10 +77,11 @@ pwd
 # initialize terraform in this directory, and destroy what was exported in the GBU compartment
 terraform init
 
-echo 'cleancompartment - take tag namespaces out of state since they need to be retired separately' 
+echo "cleancompartment take tag namespaces out of state since they need to be retired separately " 
 
 # remove tag namespaces since they can only be retired 
-arr=( `terraform state list|grep oci_identity_tag_namespace` )
+
+arr=( ` terraform state list|grep oci_identity_tag_namespace ` )
 
 for i in "${arr[@]}"
 do
