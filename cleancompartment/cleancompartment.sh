@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash -ex
 
 echo 'cleancompartment' 
 
@@ -70,6 +70,8 @@ echo 'cleancompartment - moving into tf-export to adjust some resources'
 
 # change into the export directory; the terraform state is there
 cd tf-export
+
+pwd 
 
 # initialize terraform in this directory, and destroy what was exported in the GBU compartment
 terraform init
