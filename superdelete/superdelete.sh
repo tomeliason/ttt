@@ -27,7 +27,10 @@ export TF_VAR_compartment_id=`terraform output tenancycompartments`
 rm -rf .terraform
 
 # move up a directory
-cd .. 
+cd ../.. 
+
+# move into the super delete directory
+cd superdelete 
 
 pwd 
 
