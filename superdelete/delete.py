@@ -60,7 +60,8 @@ if DeleteCompartmentOCID =="":
     print ("No compartment specified")
     sys.exit(2)
 
-config = oci.config.from_file(configfile)
+#config = oci.config.from_file(configfile)
+config = oci.config.from_file()
 
 if debug:
     config['log_requests'] = True
