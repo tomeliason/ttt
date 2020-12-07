@@ -94,11 +94,11 @@ def DeleteCompartments(config, compartments, startcomp):
                 try:
                     object.delete_compartment(compartment_id=Compartment.id)
                     print ("Deleted compartment: {}".format(Compartment.name))
-                except Exception as e:
-                    if e.status == 429:
-                        print ("Delaying.. api calls")
-                        time.sleep(10)
-                        retry = True
+                except Exception as e: 
+#                    if e.status == 429:
+                     print ("Delaying.. api calls")
+                     time.sleep(10)
+                     retry = True
 
 
 def DeletePolicies(config, compartments):
@@ -127,6 +127,79 @@ def DeletePolicies(config, compartments):
                     print ("error trying to delete: {}".format(itemstatus.name))
                 if itemstatus.name != "Tenant Admin Policy" :
                     count = count + 1
+            except:
+                print ("Deleted : {}".format(item.name))
+        if count > 0 :
+            print ("Waiting for all Objects to be deleted...")
+            time.sleep(WaitRefresh)
+        else:
+            itemsPresent = False
+    print ("All Objects deleted!")
+
+def DeleteDynamicGroups(config, compartments):
+
+    AllItems = []
+    object = oci.identity.IdentityClient(config)
+
+    print ("Getting all Dynamic Group objects")
+    for Compartment in compartments:
+        items = oci.pagination.list_call_get_all_results(object.list_dynamic_groups, compartment_id=Compartment.id).data
+        for item in items:
+                AllItems.append(item)
+                print("- {}".format(item.name))
+
+    itemsPresent = True
+
+    while itemsPresent:
+        count = 0
+        for item in AllItems:
+            try:
+                itemstatus = object.get_dynamic_group(dynamic_group_id=item.id).data 
+
+                try:
+                    print ("Deleting: {}".format(itemstatus.name))
+                    object.delete_dynamic_group(dynamic_group_id=itemstatus.id)
+                except:
+                    print ("error trying to delete: {}".format(itemstatus.name))
+                    count = count + 1
+            except:
+                print ("Deleted : {}".format(item.name))
+        if count > 0 :
+            print ("Waiting for all Objects to be deleted...")
+            time.sleep(WaitRefresh)
+        else:
+            itemsPresent = False
+    print ("All Objects deleted!")
+
+def DeleteGroups(config, compartments):
+
+    StdGroups = ['Administrators','AppUsers','ReadOnly','PowerUsers','Admins','SuperAdmins']
+    AllItems = []
+    object = oci.identity.IdentityClient(config)
+
+    print ("Getting all Group objects")
+    for Compartment in compartments:
+        items = oci.pagination.list_call_get_all_results(object.list_groups, compartment_id=Compartment.id).data
+        for item in items:
+                AllItems.append(item)
+                print("- {}".format(item.name))
+
+    itemsPresent = True
+
+    while itemsPresent:
+        count = 0
+        for item in AllItems:
+            try:
+                itemstatus = object.get_group(group_id=item.id).data 
+
+                if itemstatus.name not in StdGroups : 
+
+                    try:
+                        print ("Deleting: {}".format(itemstatus.name))
+#                        object.delete_group(group_id=itemstatus.id)
+                    except:
+                        print ("error trying to delete: {}".format(itemstatus.name))
+                        count = count + 1
             except:
                 print ("Deleted : {}".format(item.name))
         if count > 0 :

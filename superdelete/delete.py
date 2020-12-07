@@ -184,6 +184,12 @@ if confirm == "yes":
         print ("\n--[ Deleting Policies ]--")
         DeletePolicies(config, processCompartments)
 
+        print ("\n--[ Deleting Dynamic Groups ]--")
+        DeleteDynamicGroups(config, processCompartments)
+
+        print ("\n--[ Deleting Groups ]--")
+        DeleteGroups(config, processCompartments)
+
     print ("\n--[ Hopefully deleting compartments, if empty ]--")
     config["region"] = homeregion
     DeleteCompartments(config,processCompartments, DeleteCompartmentOCID)
