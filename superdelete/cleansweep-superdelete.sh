@@ -6,7 +6,7 @@ echo 'super delete - cleansweep'
 export TF_VAR_tenancy_ocid=$OCI_TENANCY
 
 # move into the super delete directory
-cd superdelete 
+cd ttt/superdelete 
 
 pwd 
 
