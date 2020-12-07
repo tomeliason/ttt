@@ -125,7 +125,8 @@ def DeletePolicies(config, compartments):
                     object.delete_policy(policy_id=itemstatus.id)
                 except:
                     print ("error trying to delete: {}".format(itemstatus.name))
-                count = count + 1
+                if itemstatus.name != "Tenant Admin Policy" :
+                    count = count + 1
             except:
                 print ("Deleted : {}".format(item.name))
         if count > 0 :
