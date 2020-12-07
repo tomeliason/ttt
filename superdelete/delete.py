@@ -187,8 +187,8 @@ if confirm == "yes":
         print ("\n--[ Deleting Dynamic Groups ]--")
         DeleteDynamicGroups(config, processCompartments)
 
-        print ("\n--[ Deleting Groups ]--")
-        DeleteGroups(config, processCompartments)
+        #print ("\n--[ Deleting Groups ]--")
+        #DeleteGroups(config, processCompartments)
 
     print ("\n--[ Hopefully deleting compartments, if empty ]--")
     config["region"] = homeregion
