@@ -196,7 +196,7 @@ def DeleteGroups(config, compartments):
 
                     try:
                         print ("Deleting: {}".format(itemstatus.name))
-#                        object.delete_group(group_id=itemstatus.id)
+                        object.delete_group(group_id=itemstatus.id)
                     except:
                         print ("error trying to delete: {}".format(itemstatus.name))
                         count = count + 1
