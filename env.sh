@@ -15,7 +15,7 @@
 #export OCI_TENANCY="ocid1.tenancy.oc1..aaaaaaaavutskicpohep5iy5nbrxyb2wngjyzol7de2u2lgctbppky4uwezq"
 #export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaalef46dcohxwtaw4p2b2z6rrsypxjaylqwqoecxbay22zcj4fds7a"
 
-#t3pool02
+#t3pool02 
 export TF_VAR_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaazihpwwwilkm2fjhtup5cjvcfrebmlhchtv2bmxa4n72oczdbbpuq"
 export OCI_TENANCY="ocid1.tenancy.oc1..aaaaaaaazihpwwwilkm2fjhtup5cjvcfrebmlhchtv2bmxa4n72oczdbbpuq"
 export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaajav4vpe4fwyhzotcr7uqquvhwgfplrnf7un3whcu3do2j4wxjc6a"
